@@ -18,7 +18,8 @@ module.exports.hello = async event => {
     *  */ 
     geoCodeResponse = await geocode(result.text);
     console.log(`response from geo-code is ${geoCodeResponse}`);
-    forecastResponse = await forecast(geoCodeResponse.latitude, geoCodeResponse.longitude)
+    forecastResponse = await forecast(geoCodeResponse.latitude, geoCodeResponse.longitude, result.text)
+    
   }
   else{
     response = 'Please provide a city name.'

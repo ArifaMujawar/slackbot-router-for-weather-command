@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "query-string": "^6.11.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "serverless-dotenv-plugin": "^2.3.2"
   }
 }

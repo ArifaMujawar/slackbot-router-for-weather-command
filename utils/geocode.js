@@ -2,10 +2,9 @@ const request = require("request");
 
 const geocode = address => {
   return new Promise((resolve, reject) => {
-    const url =
-      "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
-      encodeURIComponent(address) +
-      ".json?access_token=pk.eyJ1IjoiYXJpZmFtIiwiYSI6ImNrNmtjeGY1cjAydm4zbW8wMm9ra2dtY3MifQ.dbqYYlLlY28UvpPDcJOxeA&limit=1";
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+      address
+    )}.json?access_token=${process.env.geocodeAccessToken}&limit=1`;
 
     request({ url, json: true }, (error, { body }) => {
       if (error) {
