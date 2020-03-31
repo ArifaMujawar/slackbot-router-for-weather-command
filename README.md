@@ -22,7 +22,7 @@
   - In the Request URL field add the following link:  https://lidd86rav0.execute-api.us-east-1.amazonaws.com/dev/helloworld
   - click on the save button.
 * Click on Install App to Workspace button in the Install your app to your workspace dropdown.
-* Yaay, you are ready to use the command.
+* Yaay!!, you are ready to use the command.
 
 ## Deploying this API
 * Install and Configure the [serverless framework](https://serverless.com/) with your AWS account.

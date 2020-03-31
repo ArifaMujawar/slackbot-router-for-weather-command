@@ -8,10 +8,8 @@ const geocode = address => {
 
     request({ url, json: true }, (error, { body }) => {
       if (error) {
-        console.log('Unable to connect to location services')
         reject("Unable to connect to location services");
       } else if (body.features.length === 0) {
-        console.log('Unable to find location. Try another search')
         reject("Unable to find location. Try another search");
       } else {
         resolve({
