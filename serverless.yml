@@ -1,4 +1,4 @@
-service: serverlessapi
+service: weather-api
 
 plugins:
   - serverless-dotenv-plugin

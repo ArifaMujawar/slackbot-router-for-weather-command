@@ -1,32 +1,44 @@
-## Table of contents
-* [Introduction](#general-info)
-* [Technologies](#technologies)
-* [](#)
-* [](#)
-* [](#)
-* [](#)
-- what is this project
-  - slack bot screenshots
-- how to use the project
-- how to develop the project
+# Weather API for Slack
 
-## Project Title
-- Serverless Api
-## General Started
-- Download the project 
+## Table of contents
+* [Introduction](#introduction)
+* [Technologies](#technologies)
+* [Using this API in Slack](#using-this-api-in-slack)
+* [Deploying this API](#deploying-this-api)
+* [Sources](#sources)
+
+
 ## Introduction
-- This project implements REST-API which is designed to be integrated with a slack-app.Using this API, I have created a slack command (/weather city_name) using which users can see the weather details of the specified city.
+- This project implements REST-API which is designed to be integrated with a slack-app. Using this API, I have created a slack command (/weather city_name) using which users can see the weather details of the specified city.
 - Below is a snapshot of output
   * ![slack weather command](image.png) 
 ## Technologies
-- The project has been implemented using Node.js, AWS lambda, API Gateway.
-## Setup
+- The project has been implemented using Node.js, AWS lambda, API Gateway and Serverless framework.
+## Using this API in Slack
+* Create a [slack app](https://api.slack.com/apps?new_app=1) 
+* In Basic Information page of your slack app, select `Slack commands` from Add features and functionality dropdown .
+  - Click on Create New Command button.
+  - In the Command field enter `/weather`. 
+  - In the Request URL field add the following link:  https://lidd86rav0.execute-api.us-east-1.amazonaws.com/dev/helloworld
+  - click on the save button.
+* Click on Install App to Workspace button in the Install your app to your workspace dropdown.
+* Yaay, you are ready to use the command.
+
+## Deploying this API
+* Install and Configure the [serverless framework](https://serverless.com/) with your AWS account.
+* Execute the following commands.
 ```
-npm install
+$ npm install
+$ serverless deploy
 ```
-## Deploy
-`serverless deploy`
-## Sources/ API Reference
-- The Project makes use of Dark Sky Api and Geocode Api.
-  - Geocode Api is used to fetch latitude and longitude based on city name provided
-  - Dark Sky Api is used to fetch weather conditions based on latitude and longitude.
+## Sources
+- The Project makes use of Dark Sky Api and Geocode API.
+  - Geocode API is used to fetch latitude and longitude based on city name provided
+  - Dark Sky API is used to fetch weather conditions based on latitude and longitude.
+
+
+## Todo
+* change the api end point name from hello world
+* code clean
+* writing tests
+
