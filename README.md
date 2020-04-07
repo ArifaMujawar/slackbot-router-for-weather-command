@@ -37,8 +37,3 @@ $ serverless deploy
   - Dark Sky API is used to fetch weather conditions based on latitude and longitude.
 
 
-## Todo
-* change the api end point name from hello world
-* code clean
-* writing tests
-
