@@ -36,4 +36,9 @@ $ serverless deploy
   - Geocode API is used to fetch latitude and longitude based on city name provided
   - Dark Sky API is used to fetch weather conditions based on latitude and longitude.
 
-
+## Tests
+- The unit tests are written using Jest testing framework. 
+- To run tests
+  ```
+  npm test
+  ```
