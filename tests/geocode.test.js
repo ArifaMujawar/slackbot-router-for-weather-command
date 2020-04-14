@@ -1,5 +1,5 @@
 const request = require("request");
-const geocode = require("../utils/geocode");
+const {geocode} = require("../utils/geocode");
 
 jest.mock("request");
 

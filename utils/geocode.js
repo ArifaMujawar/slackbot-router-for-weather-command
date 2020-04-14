@@ -22,4 +22,4 @@ const geocode = address => {
   });
 };
 
-module.exports = geocode;
+module.exports = {geocode};
